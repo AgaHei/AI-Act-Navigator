@@ -35,13 +35,25 @@ AI Act Navigator takes a description of an AI system and produces a structured c
   - Sparse retrieval (BM25 with 4,301 token vocabulary)
   - Hybrid retrieval (RRF fusion)
   - Cross-encoder reranking (ms-marco-MiniLM-L-6-v2)
+- **🎉 Complete agentic pipeline (LangGraph orchestration)**
+  - AISystemExtractor: Free text → structured IntakeForm (95%+ confidence)
+  - RiskClassifier: Classification with legal reasoning  
+  - ObligationMapper: Conditional retrieval by risk tier
+  - ActionPlanner: Prioritized compliance roadmaps
+  - Confidence-gated clarification system
 - Educational notebooks with comprehensive analysis and explanations
 - Cross-reference resolution and metadata filtering
 
 🔬 **In Development:**
 - RAGAS evaluation framework (notebook 04)
-- Agentic pipeline (LangGraph implementation)
 - Production Streamlit UI
+- Technical polish and edge case handling
+
+🎯 **Demonstrated Capability:**
+- Successfully processed Complice RAG assistant description
+- Healthcare sector classification (95% confidence)
+- Vulnerable user base detection (100% confidence)
+- Advisory autonomy assessment (85% confidence)
 
 ---
 
@@ -146,6 +158,17 @@ echo "y" | python -m src.ingestion.embedder  # Embeds with Mistral
 python -m src.ingestion.indexer    # Uploads to Qdrant
 
 # Estimated cost: < $0.10 | Duration: ~5 min | Output: 814 chunks
+```
+
+### Run the agentic pipeline
+
+```bash
+# Test the complete AI Act compliance pipeline
+$env:MISTRAL_SMALL_MODEL="open-mistral-7b"  # Windows (if hitting rate limits)
+export MISTRAL_SMALL_MODEL="open-mistral-7b"  # Linux/Mac (if hitting rate limits)
+
+python -m src.agents.extractor    # Test structured extraction
+python -m src.agents.graph        # Run full pipeline: extract → classify → map → plan
 ```
 
 ### Run the app
