@@ -7,14 +7,15 @@
 
 ## 1. Corpus Overview
 
-The corpus consists of four source families, each with distinct structure, register, and update cadence. They must be ingested differently and carry different metadata weights.
+The corpus consists of five source documents, each with distinct structure, register, and update cadence. They must be ingested differently and carry different metadata weights.
 
 | # | Source family | Authority | Format | Update frequency |
 |---|---------------|-----------|--------|-----------------|
-| 1 | AI Act — main text | EUR-Lex (OJ) | HTML / PDF | Static (published 12 Jul 2024) |
-| 2 | AI Act — Annexes I–XIII | EUR-Lex (OJ) | HTML / PDF | Static |
-| 3 | GPAI Code of Practice | EU AI Office | PDF | Final version: 10 Jul 2025 |
-| 4 | GPAI Guidelines (Commission) | EU AI Office | PDF | Published 18 Jul 2025 |
+| 1 | AI Act — main text + Annexes I–XIII | EUR-Lex (OJ) | HTML / PDF | Static (published 12 Jul 2024) |
+| 2 | GPAI Code of Practice — Chapter 1 (Transparency) | EU AI Office | PDF | Final version: 10 Jul 2025 |
+| 3 | GPAI Code of Practice — Chapter 2 (Copyright) | EU AI Office | PDF | Final version: 10 Jul 2025 |
+| 4 | GPAI Code of Practice — Chapter 3 (Safety & Security) | EU AI Office | PDF | Final version: 10 Jul 2025 |
+| 5 | GPAI Guidelines (Commission) | EU AI Office | PDF | Published 18 Jul 2025 |
 
 ---
 
