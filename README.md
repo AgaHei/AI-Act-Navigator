@@ -20,7 +20,7 @@ AI Act Navigator takes a description of an AI system and produces a structured c
 3. **Action plan** — generates a prioritised checklist of compliance steps with deadlines drawn from the AI Act's phased implementation timeline
 
 **Example input:**
-> *"Complice is a RAG-based conversational assistant for young adults aged 16–25, deployed on a public web platform, built on Mistral AI, offering emotional support and information on mental health topics."*
+> *"Complice is a RAG-based conversational assistant for young adults aged 16–25, not deployed on a public web platform, built on Open AI, offering emotional support and information on mental health topics."*
 
 **Example output:** Risk tier → Limited Risk with Art. 50 transparency obligations + precautionary Annex III point 4 assessment recommended. Action plan with 6 prioritised steps, deadlines, and legal anchors.
 
@@ -227,7 +227,7 @@ Key deadlines surfaced in action plans:
 
 ## Use case: Complice
 
-The worked example used throughout development: *Complice*, a RAG-based conversational assistant for young adults built on Mistral AI.
+The worked example used throughout development: *Complice*, a RAG-based conversational assistant for young adults built on Open AI.
 
 **Classification result:** Limited Risk — Art. 50 transparency obligations apply. Precautionary Annex III point 4 (education/vulnerable users) assessment recommended and documented.
 
@@ -252,8 +252,8 @@ Total API cost for the full development cycle (ingestion + testing + RAGAS evalu
 
 ## Author
 
-**Aga Heijligers** — AI Consultant · ML Engineer · Multilingual  
-[LinkedIn](https://linkedin.com/in/YOUR_PROFILE) · [GitHub](https://github.com/YOUR_USERNAME)  
+**Agnès Heijligers** — AI Consultant · AI Architect · Multilingual  
+[LinkedIn](linkedin.com/in/agnès-heijligers-ba24323b9) · [GitHub](github.com/AgaHei)  
 
 Certified AI Architect (Jedha Bootcamp, Paris) with a background in international B2B, key account management, and professional translation.  
 Targeting roles in AI consulting, solutions engineering, and technical account management in the Paris market.
