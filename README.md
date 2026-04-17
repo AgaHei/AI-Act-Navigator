@@ -55,6 +55,20 @@ AI Act Navigator takes a description of an AI system and produces a structured c
 - Vulnerable user base detection (100% confidence)
 - Advisory autonomy assessment (85% confidence)
 
+## 🏆 Live Demonstration
+
+**See the system in action:** [Complice AI Act Compliance Analysis](complice_analysis_report.md)
+
+This comprehensive report demonstrates AI Act Navigator's complete capability - from a simple text description of "Complice, a RAG-based conversational assistant for young adults with ASD" to a professional 6-page compliance assessment including:
+
+✅ **Structured Risk Classification:** Limited Risk (85% confidence)  
+✅ **Legal Reasoning:** Healthcare + vulnerable users analysis  
+✅ **Obligation Mapping:** Article 50 transparency requirements  
+✅ **Action Plan:** 6 prioritized steps with deadlines (60-80 hours over 6 months)  
+✅ **Strategic Recommendations:** Monitoring, accessibility, privacy compliance  
+
+**This is exactly what clients receive** - professional, actionable AI Act compliance roadmaps ready for implementation.
+
 ---
 
 ## Architecture
