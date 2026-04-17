@@ -20,9 +20,28 @@ AI Act Navigator takes a description of an AI system and produces a structured c
 3. **Action plan** — generates a prioritised checklist of compliance steps with deadlines drawn from the AI Act's phased implementation timeline
 
 **Example input:**
-> *"Complice is a RAG-based conversational assistant for young adults aged 16–25, not deployed on a public web platform, built on Open AI, offering emotional support and information on mental health topics."*
+> *"Complice is a RAG-based conversational assistant for young adults with ASD aged 16–25, not deployed on a public web platform, built on Open AI, offering emotional support and information on mental health topics."*
 
 **Example output:** Risk tier → Limited Risk with Art. 50 transparency obligations + precautionary Annex III point 4 assessment recommended. Action plan with 6 prioritised steps, deadlines, and legal anchors.
+
+---
+
+## 🚀 Current Status
+
+✅ **Fully Operational Components:**
+- Complete RAG pipeline (814 chunks embedded and indexed)
+- All 4 retrieval methods tested and working:
+  - Dense retrieval (mistral-embed + Qdrant) 
+  - Sparse retrieval (BM25 with 4,301 token vocabulary)
+  - Hybrid retrieval (RRF fusion)
+  - Cross-encoder reranking (ms-marco-MiniLM-L-6-v2)
+- Educational notebooks with comprehensive analysis and explanations
+- Cross-reference resolution and metadata filtering
+
+🔬 **In Development:**
+- RAGAS evaluation framework (notebook 04)
+- Agentic pipeline (LangGraph implementation)
+- Production Streamlit UI
 
 ---
 
@@ -114,12 +133,19 @@ cp .env.example .env
 # Edit .env with your API keys
 ```
 
-### Ingest the corpus
+### Ingest the corpus (step-by-step)
 
 ```bash
-python scripts/ingest.py
-# Downloads AI Act from EUR-Lex, chunks, embeds, and indexes into Qdrant
-# Estimated cost: < $0.10 | Duration: ~5 min
+# Activate environment
+.venv\Scripts\Activate.ps1  # Windows
+source .venv/bin/activate     # Linux/Mac
+
+# Run ingestion pipeline
+python -m src.ingestion.chunker    # Creates processed chunks
+echo "y" | python -m src.ingestion.embedder  # Embeds with Mistral
+python -m src.ingestion.indexer    # Uploads to Qdrant
+
+# Estimated cost: < $0.10 | Duration: ~5 min | Output: 814 chunks
 ```
 
 ### Run the app
@@ -176,10 +202,10 @@ ai-act-navigator/
 │       ├── app.py               # Streamlit main app
 │       └── components.py        # Reusable UI components
 ├── notebooks/
-│   ├── 01_corpus_exploration.ipynb
-│   ├── 02_chunking_strategy.ipynb
-│   ├── 03_retrieval_comparison.ipynb
-│   └── 04_ragas_evaluation.ipynb
+│   ├── 01_corpus_exploration.ipynb     # AI Act structure and content analysis
+│   ├── 02_chunking_strategy.ipynb      # Chunking approaches and annex handling
+│   ├── 03_retrieval_comparison.ipynb   # Dense vs sparse vs hybrid analysis with overlap interpretation
+│   └── 04_ragas_evaluation.ipynb       # Quantitative evaluation with RAGAS metrics
 ├── tests/
 │   ├── test_chunker.py
 │   ├── test_retrieval.py
@@ -187,6 +213,19 @@ ai-act-navigator/
 └── scripts/
     └── ingest.py                # One-shot corpus ingestion script
 ```
+
+---
+
+## 📚 Educational Notebooks
+
+| Notebook | Purpose | Key Learning |
+|----------|---------|-------------|
+| `01_corpus_exploration.ipynb` | Understand AI Act structure and content | Document hierarchy, chunk distribution, metadata schema |
+| `02_chunking_strategy.ipynb` | Compare chunking approaches and annex handling | Optimal chunk sizes, context preservation, cross-references |
+| `03_retrieval_comparison.ipynb` | **Dense vs sparse vs hybrid analysis** | Complementarity analysis, scoring systems, overlap interpretation |
+| `04_ragas_evaluation.ipynb` | Quantitative evaluation with RAGAS metrics | Precision, recall, faithfulness benchmarking |
+
+**Educational Approach**: All notebooks include explicit explanatory markdown cells for clarity and learning.
 
 ---
 
@@ -198,6 +237,27 @@ Retrieval strategies are benchmarked on a curated test dataset of 30 question/gr
 - Risk classification (Art. 6 + Annex III)
 - High-risk obligations (Art. 9, 10, 13, 17)
 - Transparency obligations (Art. 50)
+- GPAI model obligation queries (Art. 53, 55)
+- Cross-reference resolution tests
+
+**Current benchmark results**: Available in notebook 04 and `data/processed/` evaluation outputs.
+
+**Key insights from retrieval analysis**:
+- Average 5.5/10 overlap between dense and sparse methods confirms complementarity
+- Hybrid approach provides meaningful diversity in retrieved chunks
+- Zero overlap on complex queries demonstrates method-specific strengths
+
+---
+
+## 🤝 Contributing
+
+See individual notebook outputs and evaluation results in `data/processed/`.
+
+---
+
+## 📄 License
+
+MIT License - see LICENSE file for details
 - GPAI queries (Art. 53, 55)
 - Cross-reference chains
 
@@ -227,7 +287,7 @@ Key deadlines surfaced in action plans:
 
 ## Use case: Complice
 
-The worked example used throughout development: *Complice*, a RAG-based conversational assistant for young adults built on Open AI.
+The worked example used throughout development: *Complice*, a RAG-based conversational assistant for young adults with ASD built on Open AI.
 
 **Classification result:** Limited Risk — Art. 50 transparency obligations apply. Precautionary Annex III point 4 (education/vulnerable users) assessment recommended and documented.
 
