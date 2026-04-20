@@ -22,6 +22,8 @@ RUN python -c "from sentence_transformers import CrossEncoder; CrossEncoder('cro
 # The app connects to Qdrant Cloud at runtime via QDRANT_URL secret
 COPY src/ ./src/
 COPY docs/ ./docs/
+COPY app.py ./
+COPY .streamlit/ ./.streamlit/
 
 # Create empty data dirs (corpus lives in Qdrant Cloud, not in container)
 RUN mkdir -p data/raw data/processed data/embeddings
@@ -36,7 +38,7 @@ ENV STREAMLIT_SERVER_HEADLESS=true
 ENV STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
 ENV PYTHONPATH=/app
 
-CMD ["streamlit", "run", "src/ui/app.py", \
+CMD ["streamlit", "run", "app.py", \
      "--server.port=7860", \
      "--server.address=0.0.0.0", \
      "--server.headless=true"]
