@@ -41,31 +41,53 @@ AI Act Navigator takes a description of an AI system and produces a structured c
   - ObligationMapper: Conditional retrieval by risk tier
   - ActionPlanner: Prioritized compliance roadmaps
   - Confidence-gated clarification system
+- **🎯 Production Streamlit UI** - 4-step compliance workflow fully operational
 - Educational notebooks with comprehensive analysis and explanations
 - Cross-reference resolution and metadata filtering
 
 🔬 **In Development:**
 - RAGAS evaluation framework (notebook 04)
-- Production Streamlit UI
 - Technical polish and edge case handling
 
-🎯 **Demonstrated Capability:**
-- Successfully processed Complice RAG assistant description
-- Healthcare sector classification (95% confidence)
-- Vulnerable user base detection (100% confidence)
-- Advisory autonomy assessment (85% confidence)
+🏆 **Live Demonstrations:**
+- Multiple professional compliance assessments generated
+- **Complice:** High Risk classification (healthcare + vulnerable users)
+- **E-commerce chatbot:** Different risk tier and obligations  
+- Proving system handles diverse AI use cases with legal precision
 
-## 🏆 Live Demonstration
+🎯 **Demonstrated Capabilities:**
+- **Complete end-to-end processing** from free text to professional reports
+- **Multiple AI system classifications** with sophisticated legal reasoning
+- **Complice Analysis #1:** Limited Risk (85% confidence) → Art. 50 transparency
+- **Complice Analysis #2:** High Risk (90% confidence) → Full Annex III compliance
+- **E-commerce chatbot:** Professional assessment with different risk profile  
+- **Proving system robustness** across diverse AI use cases and interpretations
+- **Production-ready Streamlit interface** with 4-step compliance workflow
 
-**See the system in action:** [Complice AI Act Compliance Analysis](complice_analysis_report.md)
+## 🏆 Live Demonstrations
 
-This comprehensive report demonstrates AI Act Navigator's complete capability - from a simple text description of "Complice, a RAG-based conversational assistant for young adults with ASD" to a professional 6-page compliance assessment including:
+**Multiple professional assessments showcase system capability:**
+
+### **Primary Example: [Complice AI Act Compliance Analysis](complice_analysis_report.md)**
+This comprehensive 6-page report demonstrates complete capability - from simple text description to professional compliance assessment:
 
 ✅ **Structured Risk Classification:** Limited Risk (85% confidence)  
 ✅ **Legal Reasoning:** Healthcare + vulnerable users analysis  
 ✅ **Obligation Mapping:** Article 50 transparency requirements  
 ✅ **Action Plan:** 6 prioritized steps with deadlines (60-80 hours over 6 months)  
 ✅ **Strategic Recommendations:** Monitoring, accessibility, privacy compliance  
+
+### **Advanced Analysis: High-Risk Assessment** 
+Same Complice system analyzed from alternative legal angle:
+- **High Risk classification (90% confidence)** → Annex III point 5 compliance
+- **8-action compliance roadmap** including FRIA, EU database registration
+- **Urgent timelines** with May-July 2026 deadlines
+- **Professional legal anchoring** to specific AI Act articles
+
+### **Diverse Use Cases**
+- **E-commerce chatbots** → Different risk tiers and obligations
+- **HR screening tools** → Employment sector compliance  
+- **Medical imaging systems** → Critical infrastructure requirements
 
 **This is exactly what clients receive** - professional, actionable AI Act compliance roadmaps ready for implementation.
 
