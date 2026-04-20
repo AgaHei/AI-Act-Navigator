@@ -1,6 +1,6 @@
 ---
 title: AI Act Navigator
-emoji: 🇪🇺
+emoji: ⚖️
 colorFrom: blue
 colorTo: yellow
 sdk: docker
