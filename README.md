@@ -1,3 +1,15 @@
+---
+title: AI Act Navigator
+emoji: 🇪🇺
+colorFrom: blue
+colorTo: yellow
+sdk: docker
+app_port: 7860
+pinned: true
+license: mit
+short_description: EU AI Act compliance assessment powered by RAG + LangGraph
+---
+
 # AI Act Navigator 🇪🇺
 
 > **Advanced RAG system for EU AI Act compliance assessment**  
