@@ -15,11 +15,13 @@ short_description: EU AI Act compliance assessment powered by RAG + LangGraph
 > **Advanced RAG system for EU AI Act compliance assessment**  
 > Helping AI consultants classify AI systems by risk tier and generate actionable compliance roadmaps.
 
+**🚀 [Try it live on HuggingFace Spaces!](https://huggingface.co/spaces/AgaHei/AI-Act-Navigator)**
+
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
 [![LangChain](https://img.shields.io/badge/LangChain-LangGraph-green.svg)](https://langchain.com)
 [![Mistral AI](https://img.shields.io/badge/LLM-Mistral_AI-orange.svg)](https://mistral.ai)
 [![Qdrant](https://img.shields.io/badge/VectorDB-Qdrant-red.svg)](https://qdrant.tech)
-[![HuggingFace](https://img.shields.io/badge/Deploy-HuggingFace_Spaces-yellow.svg)](https://huggingface.co/spaces)
+[![HuggingFace](https://img.shields.io/badge/Live_Demo-HuggingFace_Spaces-yellow.svg)](https://huggingface.co/spaces/AgaHei/AI-Act-Navigator)
 
 ---
 
