@@ -30,7 +30,7 @@ from enum import Enum
 from typing import Optional
 
 from dotenv import load_dotenv
-from mistralai.client import Mistral
+from mistralai import Mistral
 
 from .extractor import IntakeForm
 from ..retrieval.reranker import RetrievalPipeline

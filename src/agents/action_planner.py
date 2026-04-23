@@ -24,7 +24,7 @@ from datetime import date
 from typing import Optional
 
 from dotenv import load_dotenv
-from mistralai.client import Mistral
+from mistralai import Mistral
 
 from .classifier import ClassificationResult, RiskTier
 from .obligation_mapper import ObligationMap, Obligation

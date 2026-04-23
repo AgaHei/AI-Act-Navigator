@@ -49,7 +49,12 @@ AI Act Navigator takes a description of an AI system and produces a structured c
   - Sparse retrieval (BM25 with 4,301 token vocabulary)
   - Hybrid retrieval (RRF fusion)
   - Cross-encoder reranking (ms-marco-MiniLM-L-6-v2)
-- **🎉 Complete agentic pipeline (LangGraph orchestration)**
+- **� RAGAS Evaluation Complete (notebook 04)**
+  - **28-sample evaluation** across 5 AI Act categories
+  - **Hybrid strategy validated**: 85% context recall + 100% faithfulness
+  - **Quantitative benchmarking**: Dense, Hybrid, Reranked strategies compared
+  - **Production recommendation**: Hybrid retrieval optimal for legal text
+- **�🎉 Complete agentic pipeline (LangGraph orchestration)**
   - AISystemExtractor: Free text → structured IntakeForm (95%+ confidence)
   - RiskClassifier: Classification with legal reasoning  
   - ObligationMapper: Conditional retrieval by risk tier
@@ -60,8 +65,8 @@ AI Act Navigator takes a description of an AI system and produces a structured c
 - Cross-reference resolution and metadata filtering
 
 🔬 **In Development:**
-- RAGAS evaluation framework (notebook 04)
 - Technical polish and edge case handling
+- Extended corpus integration (additional EU AI guidelines)
 
 🏆 **Live Demonstrations:**
 - Multiple professional compliance assessments generated
@@ -247,6 +252,11 @@ ai-act-navigator/
 ├── docs/
 │   ├── corpus_inventory.md      # Corpus structure, chunking strategy, metadata schema
 │   └── architecture.md          # Detailed architecture decisions
+├── notebooks/                      # Development & analysis notebooks
+│   ├── 01_corpus_exploration.ipynb    # Data inspection & chunking analysis
+│   ├── 02_chunking_strategy.ipynb     # Hierarchical chunking strategy
+│   ├── 03_retrieval_comparison.ipynb  # Retrieval method testing
+│   └── 04_ragas_evaluation.ipynb      # Quantitative RAGAS benchmarking
 ├── data/
 │   ├── raw/                     # Downloaded source documents (gitignored)
 │   ├── processed/               # Chunked documents with metadata

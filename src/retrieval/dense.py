@@ -15,7 +15,7 @@ from dataclasses import dataclass
 from typing import Optional
 
 from dotenv import load_dotenv
-from mistralai.client import Mistral
+from mistralai import Mistral
 from qdrant_client import QdrantClient
 from qdrant_client.models import Filter, FieldCondition, MatchAny, MatchValue
 

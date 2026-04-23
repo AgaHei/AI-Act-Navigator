@@ -30,7 +30,7 @@ from typing import Optional
 from pathlib import Path
 
 from dotenv import load_dotenv
-from mistralai.client import Mistral
+from mistralai import Mistral
 from rank_bm25 import BM25Okapi
 from tqdm import tqdm
 
