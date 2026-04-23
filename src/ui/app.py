@@ -280,7 +280,7 @@ def main():
 
         st.divider()
         st.caption(
-            "Built by [Aga Heijligers](https://linkedin.com/in/agaheijligers) · "
+            "Built by [Agnès Heijligers](https://linkedin.com/in/agaheijligers) · "
             "[GitHub](https://github.com/AgaHei/ai-act-navigator)"
         )
 
