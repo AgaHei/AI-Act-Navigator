@@ -137,6 +137,58 @@ Action Plan Generator                ← deadlines from implementation timeline
 Compliance Assessment Report
 ```
 
+## 🤖 Why Agentic? (Beyond Simple RAG)
+
+**AI Act Navigator isn't just a RAG system** — it's an **agentic AI system** that uses multiple specialized AI agents working together to solve complex legal compliance challenges. Here's why this matters:
+
+### 🎯 **Agentic vs. Simple RAG**
+
+| **Simple RAG** | **🚀 AI Act Navigator (Agentic)** |
+|---------------|----------------------------------|
+| ❌ Single-step: search → generate | ✅ **Multi-step reasoning**: extract → classify → retrieve → map → plan |
+| ❌ Same retrieval for every query | ✅ **Adaptive retrieval**: Different strategies based on risk classification |
+| ❌ No validation or refinement | ✅ **Confidence gating**: Asks clarifying questions when uncertain |
+| ❌ Generic responses | ✅ **Specialized agents**: Each agent optimized for specific legal tasks |
+| ❌ Static workflow | ✅ **Dynamic orchestration**: LangGraph manages decision trees and loops |
+
+### 🎭 **Specialized AI Agents**
+
+**1. 🧠 AISystemExtractor**
+- **Role**: Converts free-text descriptions into structured legal intake forms
+- **Intelligence**: 95%+ confidence scoring + targeted clarification questions
+- **Why better**: Ensures complete, accurate data before legal analysis begins
+
+**2. ⚖️ RiskClassifier**  
+- **Role**: Maps AI systems to correct risk tiers with legal reasoning
+- **Intelligence**: Multi-step analysis of Articles 5, 6, and Annex III compliance
+- **Why better**: Provides transparent legal reasoning, not just classifications
+
+**3. 🔍 ObligationMapper**
+- **Role**: Identifies applicable legal obligations based on risk tier + context  
+- **Intelligence**: Conditional retrieval — different search strategies per risk level
+- **Why better**: Avoids information overload by surfacing only relevant requirements
+
+**4. 📋 ActionPlanner**
+- **Role**: Generates prioritized compliance roadmaps with realistic deadlines
+- **Intelligence**: Understands AI Act implementation timeline + business context
+- **Why better**: Produces actionable plans, not generic legal advice
+
+### 🌐 **LangGraph Orchestration**
+
+The agents work together through **LangGraph workflows** that enable:
+- **🔄 Clarification loops**: "I need more details about your user base to classify risk correctly"
+- **🎯 Conditional branching**: High-risk systems get different obligation searches than limited-risk
+- **⚡ Parallel processing**: Retrieval + cross-reference resolution happen simultaneously  
+- **🛡️ Error recovery**: Graceful handling when individual agents encounter edge cases
+
+### 💡 **Real-World Impact**
+
+**Traditional RAG would produce:** *"The AI Act has requirements for high-risk AI systems..."*
+
+**AI Act Navigator produces:** *"Your system is **High Risk** (90% confidence) under Annex III point 5. You need: (1) FRIA by May 2026, (2) EU database registration, (3) Risk management system, (4) Technical documentation... [8 specific actions with deadlines]"*
+
+This **agentic intelligence** is why the system can generate professional compliance assessments that are immediately actionable for real businesses.
+
 ### Key technical features
 
 | Feature | Implementation |
