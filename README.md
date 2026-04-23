@@ -301,52 +301,50 @@ ai-act-navigator/
 ├── requirements.txt
 ├── .env.example
 ├── Dockerfile
+├── app.py                          # HuggingFace Spaces entry point
+├── complice_analysis_report.md     # Main demo: professional compliance assessment
+├── complice_borderline_analysis.md # Legal complexity analysis (Limited vs High Risk)
+├── .github/                        # GitHub Actions workflows  
+├── .streamlit/                     # Streamlit configuration
 ├── docs/
-│   ├── corpus_inventory.md      # Corpus structure, chunking strategy, metadata schema
-│   └── architecture.md          # Detailed architecture decisions
+│   ├── corpus_inventory.md         # Corpus structure, chunking strategy, metadata schema
+│   └── architecture.md             # Detailed architecture decisions
 ├── notebooks/                      # Development & analysis notebooks
 │   ├── 01_corpus_exploration.ipynb    # Data inspection & chunking analysis
 │   ├── 02_chunking_strategy.ipynb     # Hierarchical chunking strategy
 │   ├── 03_retrieval_comparison.ipynb  # Retrieval method testing
 │   └── 04_ragas_evaluation.ipynb      # Quantitative RAGAS benchmarking
 ├── data/
-│   ├── raw/                     # Downloaded source documents (gitignored)
-│   ├── processed/               # Chunked documents with metadata
-│   └── embeddings/              # Cached embeddings (gitignored)
+│   ├── raw/                        # Downloaded source documents (gitignored)
+│   ├── processed/                  # Chunked documents with metadata
+│   └── embeddings/                 # Cached embeddings (gitignored)
 ├── src/
 │   ├── ingestion/
-│   │   ├── loader.py            # EUR-Lex + EU AI Office document fetcher
-│   │   ├── chunker.py           # Hierarchical chunking (3-level schema)
-│   │   ├── embedder.py          # mistral-embed + BM25 sparse vectors
-│   │   └── indexer.py           # Qdrant collection setup + upsert
+│   │   ├── loader.py               # EUR-Lex + EU AI Office document fetcher
+│   │   ├── chunker.py              # Hierarchical chunking (3-level schema)
+│   │   ├── embedder.py             # mistral-embed + BM25 sparse vectors
+│   │   └── indexer.py              # Qdrant collection setup + upsert
 │   ├── retrieval/
-│   │   ├── dense.py             # Qdrant dense vector search
-│   │   ├── sparse.py            # BM25 sparse search
-│   │   ├── hybrid.py            # Combined hybrid retriever
-│   │   └── reranker.py          # Cross-encoder reranking
+│   │   ├── dense.py                # Qdrant dense vector search
+│   │   ├── sparse.py               # BM25 sparse search
+│   │   ├── hybrid.py               # Combined hybrid retriever
+│   │   └── reranker.py             # Cross-encoder reranking
 │   ├── agents/
-│   │   ├── extractor.py         # Free-text → structured form (with confidence scoring)
-│   │   ├── classifier.py        # Risk tier classification (Art. 5, 6, Annex III)
-│   │   ├── obligation_mapper.py # Conditional retrieval by risk tier
-│   │   ├── action_planner.py    # Compliance checklist + deadline generation
-│   │   └── graph.py             # LangGraph pipeline definition
+│   │   ├── extractor.py            # Free-text → structured form (with confidence scoring)
+│   │   ├── classifier.py           # Risk tier classification (Art. 5, 6, Annex III)
+│   │   ├── obligation_mapper.py    # Conditional retrieval by risk tier
+│   │   ├── action_planner.py       # Compliance checklist + deadline generation
+│   │   └── graph.py                # LangGraph pipeline definition
 │   ├── evaluation/
-│   │   ├── ragas_runner.py      # RAGAS metrics computation
-│   │   └── test_dataset.py      # 30 curated Q&A pairs for evaluation
+│   │   ├── ragas_runner.py         # RAGAS metrics computation
+│   │   └── test_dataset.py         # 28 curated Q&A pairs for evaluation
 │   └── ui/
-│       ├── app.py               # Streamlit main app
-│       └── components.py        # Reusable UI components
-├── notebooks/
-│   ├── 01_corpus_exploration.ipynb     # AI Act structure and content analysis
-│   ├── 02_chunking_strategy.ipynb      # Chunking approaches and annex handling
-│   ├── 03_retrieval_comparison.ipynb   # Dense vs sparse vs hybrid analysis with overlap interpretation
-│   └── 04_ragas_evaluation.ipynb       # Quantitative evaluation with RAGAS metrics
-├── tests/
-│   ├── test_chunker.py
-│   ├── test_retrieval.py
-│   └── test_agents.py
-└── scripts/
-    └── ingest.py                # One-shot corpus ingestion script
+│       ├── app.py                  # Streamlit main app
+│       └── components.py           # Reusable UI components
+└── tests/
+    ├── test_chunker.py             # Chunking strategy tests
+    ├── test_retrieval.py           # Retrieval pipeline tests
+    └── test_agents.py              # Agent functionality tests
 ```
 
 ---
